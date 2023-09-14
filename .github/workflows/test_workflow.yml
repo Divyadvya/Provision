@@ -6,9 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - divya
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -48,9 +47,9 @@ jobs:
           curl -fO https://repo.phdata.io/yDr95R4UUTucC9DR/toolkit-cli/maven/io/phdata/toolkit/toolkit-cli/0.23.1/toolkit-cli-0.23.1.zip
           unzip toolkit-cli-0.23.1.zip
           pwd
-          export PATH=$PATH:/home/runner/work/FCB_REPO/FCB_REPO/toolkit-cli-0.23.1
+          export PATH=$PATH:/home/runner/work/Provision/Provision/toolkit-cli-0.23.1
                     
           pwd
           ls
-          toolkit provision apply          
+          toolkit provision apply --plan         
 
